@@ -1,0 +1,22 @@
+{
+  "name": "es2015-publish-template",
+  "description": "",
+  "main": "dist/es2015-publish-template.browser.min.js",
+  "authors": [
+    "Andy Johnson"
+  ],
+  "license": "ISC",
+  "moduleType": [
+    "node"
+  ],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "jspm_packages",
+    "test",
+    "tests"
+  ]
+}
