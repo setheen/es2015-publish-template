@@ -1,6 +1,9 @@
 {
     "name": "es2015-publish-template",
+    "main": "dist/cjs_es5/index.js",
     "version": "0.0.1",
+    "jsnext:main": "dist/es2015/index.js",
+	"private": true,
     "scripts": 
     {
       "cjs_es5": "tsc --outDir dist/cjs_es5 -t es5 -m commonjs -d --inlineSourceMap lib/index",
