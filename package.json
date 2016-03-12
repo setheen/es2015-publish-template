@@ -1,7 +1,27 @@
 {
+    "name": "es2015-publish-template",
+    "version": "0.0.1",
+    "scripts": 
+    {
+      "cjs_es5": "tsc --outDir dist/cjs_es5 -t es5 -m commonjs -d --inlineSourceMap lib/index",
+      "cjs_es6": "tsc --outDir dist/cjs_es6 -t es6 -m commonjs -d --inlineSourceMap lib/index",
+      "cjs": "npm run cjs_es5 && npm run cjs_es6",
+      "amd_es5": "tsc --outDir dist/amd_es5 -t es5 -m amd -d --inlineSourceMap lib/index",
+      "amd_es6": "tsc --outDir dist/amd_es6 -t es6 -m amd -d --inlineSourceMap lib/index",
+      "amd": "npm run amd_es5 && npm run amd_es6",
+      "umd_es5": "tsc --outDir dist/umd_es5 -t es5 -m umd -d --inlineSourceMap lib/index",
+      "umd_es6": "tsc --outDir dist/umd_es6 -t es6 -m umd -d --inlineSourceMap lib/index",
+      "umd": "npm run umd_es5 && npm run umd_es6",
+      "system_es5": "tsc --outDir dist/system_es5 -t es5 -m system -d --inlineSourceMap lib/index",
+      "system_es6": "tsc --outDir dist/system_es6 -t es6 -m system -d --inlineSourceMap lib/index",
+      "system": "npm run system_es5 && npm run system_es6",
+      "es2015": "tsc --outDir dist/es2015 -t es6 -m es2015 -d --inlineSourceMap lib/index",
+      "build-all": "npm run cjs && npm run amd && npm run umd && npm run system && npm run es2015",
+      "postinstall": "npm run build-all"
+    },
   "jspm": {
     "devDependencies": {
-      "typescript": "npm:typescript@^1.6.2"
+      "typescript": "npm:typescript@^1.8.7"
     }
   }
 }
