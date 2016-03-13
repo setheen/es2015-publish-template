@@ -6,20 +6,13 @@ System.register(['./multiply'], function(exports_1, context_1) {
         console.log("Hello " + text + " from es2015-publish-template");
     }
     exports_1("hello", hello);
-    var exportedNames_1 = {
-        'hello': true
-    };
-    function exportStar_1(m) {
-        var exports = {};
-        for(var n in m) {
-            if (n !== "default"&& !exportedNames_1.hasOwnProperty(n)) exports[n] = m[n];
-        }
-        exports_1(exports);
-    }
     return {
         setters:[
             function (multiply_1_1) {
-                exportStar_1(multiply_1_1);
+                exports_1({
+                    "MathLib": multiply_1_1["MathLib"],
+                    "MultiplyInterface": multiply_1_1["MultiplyInterface"]
+                });
             }],
         execute: function() {
         }

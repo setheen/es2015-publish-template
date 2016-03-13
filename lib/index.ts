@@ -1,4 +1,4 @@
-export * from './multiply';
+export {MathLib, MultiplyInterface} from './multiply';
 
 // Some floating comments for no reason
 
