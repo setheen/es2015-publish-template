@@ -1,0 +1,6 @@
+{
+  "name": "es2015-publish-template",
+  "main": "dist/es2015/index.d.ts",
+  "version": false,
+  "dependencies": {}
+}
