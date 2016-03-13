@@ -10,10 +10,10 @@ var es = require('es2015-publish-template');
 // Uncomment line below to view typscript intellisense working
 //es.
 
-// console.log(es.hello);
-// let math = new es.MathLib();
-// let result = math.multiply(3,4);
-// console.log(`expecting 12, calculated ${result}`);
+es.hello('World!');
+let math = new es.MathLib();
+let result = math.multiply(3,4);
+console.log(`expecting 12, calculated ${result}`);
 
 //   __                                  
 //  |__)_  _    | _  _  |  .|_  _ _  _   
@@ -29,5 +29,4 @@ var _ = require('lodash');
 //_.
 
 console.log('lodash has also found the calculated result to be ' + _.get({calculatedResult: result}, 'calculatedResult'));
-
 console.log('If you can see this, it means this example performed as expected');
