@@ -19,7 +19,10 @@ node app.js
     
 ## Scenario
 Take a look at this image:
-![](https://github.com/setheen/es2015-publish-template/examples/02_node_and_jspm/resources/jspm.png)
+
+<p align="center">
+    <img src="resources/jspm.png"/>
+</p>
 
 
 The key takeaway with this example is we are able to display intellisense module _"d.ts"_ declaration files within our IDE. 
