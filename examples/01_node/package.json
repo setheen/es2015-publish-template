@@ -2,8 +2,8 @@
   "name": "01_node",
   "version": "1.0.0",
   "description": "First example of importing custom library into a NodeJs environment",
-  "main": "app.js",
   "author": "Andrew Johnson <setheen@gmail.com>",
+  "main": "app.js",
   "license": "MIT",
   "dependencies": {
     "es2015-publish-template": "git+https://github.com/setheen/es2015-publish-template.git",

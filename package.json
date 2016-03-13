@@ -1,32 +1,32 @@
 {
     "name": "es2015-publish-template",
+	"version": "0.0.1",
+	"description": "small typescript library illustrating packaging, modules and consumption",
+	"author": "Andrew Johnson <setheen@gmail.com>",
     "main": "dist/cjs_es5/index.js",
     "jsnext:main": "dist/es2015/index.js",
     "typings": "dist/es2015/index.d.ts",
-    "version": "0.0.1",
 	"private": true,
     "scripts": 
     {
-      "cjs_es5": "tsc --outDir dist/cjs_es5 -t es5 -m commonjs -d --inlineSourceMap lib/index",
-      "cjs_es6": "tsc --outDir dist/cjs_es6 -t es6 -m commonjs -d --inlineSourceMap lib/index",
+      "cjs_es5": "tsc --outDir dist/cjs_es5 -t es5 -m commonjs --inlineSourceMap lib/index",
+      "cjs_es6": "tsc --outDir dist/cjs_es6 -t es6 -m commonjs --inlineSourceMap lib/index",
       "cjs": "npm run cjs_es5 && npm run cjs_es6",
-      "amd_es5": "tsc --outDir dist/amd_es5 -t es5 -m amd -d --inlineSourceMap lib/index",
-      "amd_es6": "tsc --outDir dist/amd_es6 -t es6 -m amd -d --inlineSourceMap lib/index",
+      "amd_es5": "tsc --outDir dist/amd_es5 -t es5 -m amd --inlineSourceMap lib/index",
+      "amd_es6": "tsc --outDir dist/amd_es6 -t es6 -m amd --inlineSourceMap lib/index",
       "amd": "npm run amd_es5 && npm run amd_es6",
-      "umd_es5": "tsc --outDir dist/umd_es5 -t es5 -m umd -d --inlineSourceMap lib/index",
-      "umd_es6": "tsc --outDir dist/umd_es6 -t es6 -m umd -d --inlineSourceMap lib/index",
+      "umd_es5": "tsc --outDir dist/umd_es5 -t es5 -m umd --inlineSourceMap lib/index",
+      "umd_es6": "tsc --outDir dist/umd_es6 -t es6 -m umd --inlineSourceMap lib/index",
       "umd": "npm run umd_es5 && npm run umd_es6",
-      "system_es5": "tsc --outDir dist/system_es5 -t es5 -m system -d --inlineSourceMap lib/index",
-      "system_es6": "tsc --outDir dist/system_es6 -t es6 -m system -d --inlineSourceMap lib/index",
+      "system_es5": "tsc --outDir dist/system_es5 -t es5 -m system --inlineSourceMap lib/index",
+      "system_es6": "tsc --outDir dist/system_es6 -t es6 -m system --inlineSourceMap lib/index",
       "system": "npm run system_es5 && npm run system_es6",
       "es2015": "tsc --outDir dist/es2015 -t es6 -m es2015 -d --inlineSourceMap lib/index",
       "test": "tsc -t es6 -m system --outFile dist/es2015-publish-template.d.ts -d lib/index",
-      "build-all": "npm run cjs && npm run amd && npm run umd && npm run system && npm run es2015"
+	  "clean": "rm dist -R",
+      "build-all": "npm run clean && npm run cjs && npm run amd && npm run umd && npm run system && npm run es2015"
     },
   "jspm": {
-      "main": "dist/es2015/index.js",
-    "devDependencies": {
-      "typescript": "npm:typescript@^1.8.7"
-    }
-  }
+      "main": "dist/es2015/index.js"
+	}
 }

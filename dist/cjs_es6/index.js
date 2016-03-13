@@ -1,17 +1,12 @@
 "use strict";
-const multiply_1 = require('./multiply');
-exports.MathLib = multiply_1.default;
-console.log('here');
-// function add(one, two)
-// {
-//     let result = one + two;
-//     console.log(`Adding ${one} and ${two} to make ${result}`);
-//     return result;
-// }
-// function testAll()
-// {
-//     let test = new MathLib();
-//     console.log(`Add result: ` + add(1,2));
-//     console.log('Multiply Result: ' + new MathLib().multiply(1,2));
-// } 
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiaW5kZXguanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi8uLi9saWIvaW5kZXgudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IjtBQUFBLDJCQUFvQixZQUFZLENBQUMsQ0FBQTtBQUN6QixlQUFPO0FBQ2YsT0FBTyxDQUFDLEdBQUcsQ0FBQyxNQUFNLENBQUMsQ0FBQztBQUNwQix5QkFBeUI7QUFDekIsSUFBSTtBQUNKLDhCQUE4QjtBQUM5QixpRUFBaUU7QUFDakUscUJBQXFCO0FBQ3JCLElBQUk7QUFFSixxQkFBcUI7QUFDckIsSUFBSTtBQUNKLGdDQUFnQztBQUNoQyw4Q0FBOEM7QUFDOUMsc0VBQXNFO0FBQ3RFLElBQUkifQ==
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+__export(require('./multiply'));
+// Some floating comments for no reason
+function hello(text) {
+    console.log(`Hello ${text} from es2015-publish-template`);
+}
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.default = hello;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiaW5kZXguanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi8uLi9saWIvaW5kZXgudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7OztBQUFBLGlCQUFjLFlBQVksQ0FBQyxFQUFBO0FBRTNCLHVDQUF1QztBQUV2QyxlQUE4QixJQUFhO0lBRXZDLE9BQU8sQ0FBQyxHQUFHLENBQUMsU0FBUyxJQUFJLCtCQUErQixDQUFDLENBQUM7QUFDOUQsQ0FBQztBQUhEO3VCQUdDLENBQUEifQ==

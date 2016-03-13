@@ -1,2 +1,2 @@
-import MathLib from './multiply';
-export { MathLib };
+export * from './multiply';
+export default function hello(text: string): void;

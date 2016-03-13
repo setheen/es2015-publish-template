@@ -1,18 +1,14 @@
 define(["require", "exports", './multiply'], function (require, exports, multiply_1) {
     "use strict";
-    exports.MathLib = multiply_1.default;
-    console.log('here');
+    function __export(m) {
+        for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+    }
+    __export(multiply_1);
+    // Some floating comments for no reason
+    function hello(text) {
+        console.log(`Hello ${text} from es2015-publish-template`);
+    }
+    Object.defineProperty(exports, "__esModule", { value: true });
+    exports.default = hello;
 });
-// function add(one, two)
-// {
-//     let result = one + two;
-//     console.log(`Adding ${one} and ${two} to make ${result}`);
-//     return result;
-// }
-// function testAll()
-// {
-//     let test = new MathLib();
-//     console.log(`Add result: ` + add(1,2));
-//     console.log('Multiply Result: ' + new MathLib().multiply(1,2));
-// } 
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiaW5kZXguanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi8uLi9saWIvaW5kZXgudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7SUFDUSxlQUFPO0lBQ2YsT0FBTyxDQUFDLEdBQUcsQ0FBQyxNQUFNLENBQUMsQ0FBQzs7QUFDcEIseUJBQXlCO0FBQ3pCLElBQUk7QUFDSiw4QkFBOEI7QUFDOUIsaUVBQWlFO0FBQ2pFLHFCQUFxQjtBQUNyQixJQUFJO0FBRUoscUJBQXFCO0FBQ3JCLElBQUk7QUFDSixnQ0FBZ0M7QUFDaEMsOENBQThDO0FBQzlDLHNFQUFzRTtBQUN0RSxJQUFJIn0=
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiaW5kZXguanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi8uLi9saWIvaW5kZXgudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7Ozs7SUFBQSxxQkFBMkI7SUFFM0IsdUNBQXVDO0lBRXZDLGVBQThCLElBQWE7UUFFdkMsT0FBTyxDQUFDLEdBQUcsQ0FBQyxTQUFTLElBQUksK0JBQStCLENBQUMsQ0FBQztJQUM5RCxDQUFDO0lBSEQ7MkJBR0MsQ0FBQSJ9

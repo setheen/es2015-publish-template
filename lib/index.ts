@@ -1,16 +1,8 @@
-import MathLib from './multiply';
-export {MathLib};
-console.log('here');
-// function add(one, two)
-// {
-//     let result = one + two;
-//     console.log(`Adding ${one} and ${two} to make ${result}`);
-//     return result;
-// }
+export * from './multiply';
 
-// function testAll()
-// {
-//     let test = new MathLib();
-//     console.log(`Add result: ` + add(1,2));
-//     console.log('Multiply Result: ' + new MathLib().multiply(1,2));
-// }
+// Some floating comments for no reason
+
+export default function hello(text : string)
+{
+    console.log(`Hello ${text} from es2015-publish-template`);
+}
