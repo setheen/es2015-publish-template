@@ -2,7 +2,7 @@
     "name": "es2015-publish-template",
     "main": "dist/cjs_es5/index.js",
     "version": "0.0.1",
-
+    "jsnext:main": "dist/es2015/index.js",
 	"private": true,
     "scripts": 
     {
@@ -19,8 +19,7 @@
       "system_es6": "tsc --outDir dist/system_es6 -t es6 -m system -d --inlineSourceMap lib/index",
       "system": "npm run system_es5 && npm run system_es6",
       "es2015": "tsc --outDir dist/es2015 -t es6 -m es2015 -d --inlineSourceMap lib/index",
-      "build-all": "npm run cjs && npm run amd && npm run umd && npm run system && npm run es2015",
-      "postinstall": "npm run build-all"
+      "build-all": "npm run cjs && npm run amd && npm run umd && npm run system && npm run es2015"
     },
   "jspm": {
     "devDependencies": {
