@@ -1,2 +1,5 @@
 npm_modules
 jspm_packages
+tests
+npm-debug.log
+.vscode

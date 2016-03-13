@@ -25,7 +25,6 @@
     },
   "jspm": {
       "main": "dist/es2015/index.js",
-	  "typings": "dist/es2015/index.d.ts",
     "devDependencies": {
       "typescript": "npm:typescript@^1.8.7"
     }

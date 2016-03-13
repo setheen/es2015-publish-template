@@ -1,0 +1,15 @@
+{
+  "name": "node-import-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "es2015-publish-template": "git+https://github.com/setheen/es2015-publish-template.git",
+    "lodash": "^4.6.1"
+  }
+}
