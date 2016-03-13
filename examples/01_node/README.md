@@ -3,8 +3,8 @@ Consumes [es2015-publish-template](https://github.com/setheen/es2015-publish-tem
 
 ##Running this example
 ```sh
-npm Install
-typings Install
+npm install
+typings install
 node app.js
 ```
 
@@ -22,7 +22,7 @@ For lodash, we can rely on the public _"typings"_ registry.  Simple enough right
 Stepping out of this example project, let's pretend we're about to publish our library for the world to consume.
 We'd like to generate a d.ts definition file for coding ease.  Here are some popular options:
 
-1. upload to [definitelytypes](http://definitelytyped.org/tsd/) for eventual consumption via command _"tsd"_  
+1. upload to [DefinitelyTyped](http://definitelytyped.org/tsd/) for eventual consumption via command _"tsd"_  
 2. upload to [the typings registry](https://github.com/typings/registry) for eventual consumption via command _"typings"_
 3. keep it within our source, exposed within package.json's _"typings"_ property
 
@@ -31,11 +31,10 @@ Option 2 might be nice if we had a large, heavily relied upon public codebase an
 This example actually relies on option 2 for loading lodash definitions.
 Option 3 looks most reasonable for our small library.
 
-Option 3 is pretty simple too.  It's just one step.  From library project to be published, point package.json _"typings"_ property to index.d.ts
+Option 3 is pretty simple too.  It's just one step.  From library project to be published, point package.json _"typings"_ property to your generated index.d.ts
 
 ```json
 {
-    ...,
     "typings": "dist/es2015/index.d.ts"
 }
 ```
