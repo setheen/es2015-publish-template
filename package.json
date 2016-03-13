@@ -2,7 +2,7 @@
     "name": "es2015-publish-template",
     "main": "dist/cjs_es5/index.js",
     "jsnext:main": "dist/es2015/index.js",
-    "typings": "dist/es2015/index.t.ds",
+    "typings": "dist/es2015/index.d.ts",
     "version": "0.0.1",
 	"private": true,
     "scripts": 
