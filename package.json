@@ -1,8 +1,8 @@
 {
     "name": "es2015-publish-template",
     "main": "dist/cjs_es5/index.js",
-    "version": "0.0.1",
     "jsnext:main": "dist/es2015/index.js",
+    "version": "0.0.1",
 	"private": true,
     "scripts": 
     {
@@ -22,6 +22,7 @@
       "build-all": "npm run cjs && npm run amd && npm run umd && npm run system && npm run es2015"
     },
   "jspm": {
+      "main": "dist/es2015/index.js",
     "devDependencies": {
       "typescript": "npm:typescript@^1.8.7"
     }
