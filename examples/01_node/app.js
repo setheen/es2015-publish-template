@@ -22,7 +22,7 @@ console.log(`expecting 12, calculated ${result}`);
 var _ = require('lodash');
 // You still wouldn't have typescript intellisense working at this point without doing these three steps
 // 1. run command "typings install lodash --save"
-// 2. create tsconfig.json with appropriate "files" entries
+// 2. create tsconfig.json with appropriate "files" entries (take a look at this example's tsconfig.json)
 // 3. if using vscode, you must first restart the editor before it knows to parse d.ts files from typings
 
 // Uncomment line below to view typescript intellisense working
