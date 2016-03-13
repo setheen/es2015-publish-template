@@ -1,0 +1,10 @@
+{
+  "name": "02_node_and_jspm",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Second example of importing custom library into a NodeJs environment",
+  "author": "Andrew Johnson <setheen@gmail.com>",
+  "main": "app.js",
+  "license": "MIT",
+  "jspm": {}
+}

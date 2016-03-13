@@ -1,5 +1,6 @@
 {
   "name": "01_node",
+  "private": true,
   "version": "1.0.0",
   "description": "First example of importing custom library into a NodeJs environment",
   "author": "Andrew Johnson <setheen@gmail.com>",
