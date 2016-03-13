@@ -13,4 +13,4 @@ class MathLib implements MultiplyInterface
     }
 }
 
-export default MathLib;
+export { MathLib };

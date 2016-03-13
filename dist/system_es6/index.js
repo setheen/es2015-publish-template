@@ -5,8 +5,9 @@ System.register(['./multiply'], function(exports_1, context_1) {
     function hello(text) {
         console.log(`Hello ${text} from es2015-publish-template`);
     }
-    exports_1("default", hello);
+    exports_1("hello", hello);
     var exportedNames_1 = {
+        'hello': true
     };
     function exportStar_1(m) {
         var exports = {};
@@ -24,4 +25,4 @@ System.register(['./multiply'], function(exports_1, context_1) {
         }
     }
 });
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiaW5kZXguanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi8uLi9saWIvaW5kZXgudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7O0lBRUEsdUNBQXVDO0lBRXZDLGVBQThCLElBQWE7UUFFdkMsT0FBTyxDQUFDLEdBQUcsQ0FBQyxTQUFTLElBQUksK0JBQStCLENBQUMsQ0FBQztJQUM5RCxDQUFDO0lBSEQsMkJBR0MsQ0FBQSJ9
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiaW5kZXguanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi8uLi9saWIvaW5kZXgudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7O0lBRUEsdUNBQXVDO0lBRXZDLGVBQXNCLElBQWE7UUFFL0IsT0FBTyxDQUFDLEdBQUcsQ0FBQyxTQUFTLElBQUksK0JBQStCLENBQUMsQ0FBQztJQUM5RCxDQUFDO0lBSEQseUJBR0MsQ0FBQSJ9

@@ -9,7 +9,8 @@ var es = require('es2015-publish-template');
 
 // Uncomment line below to view typscript intellisense working
 //es.
-
+var test = es.default;
+console.log(es.hello);
 let math = new es.MathLib();
 let result = math.multiply(3,4);
 console.log(`expecting 12, calculated ${result}`);
