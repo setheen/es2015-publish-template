@@ -9,7 +9,7 @@ var es = require('es2015-publish-template');
 
 // Uncomment line below to view typscript intellisense working
 //es.
-var test = es.default;
+es.hello('world');
 console.log(es.hello);
 let math = new es.MathLib();
 let result = math.multiply(3,4);
