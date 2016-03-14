@@ -1,8 +1,13 @@
-# NodeJS library import example
-Consumes [es2015-publish-template](https://github.com/setheen/es2015-publish-template) project using npm via github registry and [lodash](https://github.com/lodash/lodash) via npm
+# NodeJS library import with JSPM example
+Consumes [es2015-publish-template](https://github.com/setheen/es2015-publish-template) and [lodash](https://github.com/lodash/lodash) via npm and jspm
 
 ##Running this example
+Make sure you have jspm installed globally first
 ```sh
+npm install jspm -g
+```
+```sh
+jspm install
 npm install
 typings install
 node app.js
@@ -11,6 +16,7 @@ node app.js
 ## Mechanisms utilized
 - npm
     - npm registry
+    - github registry
 - jspm
     - npm registry
     - github registry
@@ -24,27 +30,33 @@ Take a look at this image
     <img src="resources/jspm.png"/>
 </p>
 
-The key takeaway with this example is we are able to display intellisense module _"d.ts"_ declaration files within our IDE. 
-For lodash, we can rely on the public _"typings"_ registry.  Simple enough right?  What about our own library project?
+Let it be known, jspm is meant for browsers [according to its author, Guy Bedford](https://github.com/jspm/npm/issues/36#issuecomment-143196574). 
+It's meant to replace bower and npm for browser dependencies when taking advantage of the systemjs module loader.
+That doesn't mean it can't or shouldn't be used with NodeJS.  The author of systemjs (same guy) even has an example on
+the [systemjs github page](https://github.com/systemjs/systemjs).  
 
-Stepping out of this example project, let's pretend we're about to publish our library for the world to consume.
-We'd like to generate a d.ts definition file for coding ease.  Here are some popular options:
-
-1. upload to [DefinitelyTyped](http://definitelytyped.org/tsd/) for eventual consumption via command _"tsd"_  
-2. upload to [the typings registry](https://github.com/typings/registry) for eventual consumption via command _"typings"_
-3. keep it within our source, exposed within package.json's _"typings"_ property
-
-It turns out, option 1 is [deprecated](https://github.com/DefinitelyTyped/tsd) as mentioned [here](https://github.com/DefinitelyTyped/tsd/issues/269).
-Option 2 might be nice if we had a large, heavily relied upon public codebase and we were willing to undergo [submission collaboration](https://github.com/typings/registry/labels/typings%20request).
-This example actually relies on option 2 for loading lodash definitions.
-Option 3 looks most reasonable for our small library.
-
-Option 3 is pretty simple too.  It's just one step.  From library project to be published, point package.json _"typings"_ property to your generated index.d.ts
-
+My favorite jspm feature
 ```json
 {
-    "typings": "dist/es2015/index.d.ts"
+    "main": "dist/cjs_es5/index.js",
+    "jspm": {
+        "main": "dist/es2015/index.js"
+    }
 }
 ```
+That little snippet lives inside the publishing library's package.json.  It allows library authors to publish NodeJS-compatible commonjs format
+over npm (as generally expected) and es6/7 modules when using systemjs without conflict.
+jspm accepts any kind of module format you can throw at it (umd/amd/commonjs/system/es2015) in any target version of javascript. It's touted as 
+the ultimate dependency loader and worth your time to investigate.  
 
-That's it!  Packages deployed with the _"typings"_ property will enable the IDE to provide helpful intellisense. 
+Unfortunately it has one giant drawback
+###NO type definition support for NodeJS :(
+Your IDE doesn't know to display d.ts definitions when it sees code like this:
+```javascript
+System.import('some-package').then((p) => 
+{
+    // doing something with "some-package" p
+});
+```
+This example illustrates loading es2015-publish-template and lodash module loading with npm and jspm.  Type definitions exist when loaded over
+npm but not over jspm.  Even so, all four permutations will execute just fine.
