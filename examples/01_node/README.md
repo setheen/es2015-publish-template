@@ -2,6 +2,10 @@
 Consumes [es2015-publish-template](https://github.com/setheen/es2015-publish-template) project using npm via github registry and [lodash](https://github.com/lodash/lodash) via npm
 
 ##Running this example
+Make sure you have typings installed globally first
+```sh
+npm install typings -g
+```
 ```sh
 npm install
 typings install
