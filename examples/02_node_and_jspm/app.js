@@ -6,7 +6,7 @@
 //  __)(-|_|_||_) 
 //            |   
 // Because we are going to use systemjs to bring in jspm packages, we need to re-flow our code in an asynchronous fashion
-// We'll be using a promise to execute the four steps in order and define the business logic up front in the following two methods
+// We'll be using promises to execute the four steps in order and define the business logic up front in the following two methods
 let System = require('jspm').Loader();
 let result = null;
 function esLogic(es)
