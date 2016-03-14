@@ -81,7 +81,7 @@ function lodashNPM()
         console.log('---------------------lodash with NPM--------------------');
         let _ = require('lodash');
         // Uncomment line below to view typescript intellisense working
-        // This is because "typings" brough in the lodash definitions, not because of npm or jspm
+        // This is because "typings" brought in the lodash definitions, not because of npm or jspm
         //_.
         
         lodashLogic(_);
