@@ -46,7 +46,7 @@ My favorite jspm feature
 ```
 That little snippet lives inside the publishing library's package.json.  It allows library authors to publish NodeJS-compatible commonjs format
 over npm (as generally expected) and es6/7 modules when using systemjs without conflict.
-For proof, install this example and navigate to jspm\_packages/github/setheen/. Check out the jspm-generated _"es2015-publish-template@master.js"_ file
+For proof, install this example and navigate to jspm\_packages/github/setheen/. Check out the jspm-generated <i>"es2015-publish-template@master.js"</i> file
 and note the export paths:
 ```javascript
 export * from "github:setheen/es2015-publish-template@master/dist/es2015/index.js";
