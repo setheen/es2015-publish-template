@@ -1,5 +1,5 @@
 {
-  "name": "node-import-test",
+  "name": "02_node_and_jspm",
   "version": false,
   "dependencies": {
     "lodash": "registry:npm/lodash#4.0.0+20160305082308"

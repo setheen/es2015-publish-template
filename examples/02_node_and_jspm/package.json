@@ -2,9 +2,22 @@
   "name": "02_node_and_jspm",
   "private": true,
   "version": "1.0.0",
-  "description": "Second example of importing custom library into a NodeJs environment",
-  "author": "Andrew Johnson <setheen@gmail.com>",
+  "description": "Second example of importing custom library with jspm into a NodeJs environment",
+  "author": "Andy Johnson <setheen@gmail.com>",
   "main": "app.js",
   "license": "MIT",
-  "jspm": {}
+  "dependencies": {
+    "es2015-publish-template": "git+https://github.com/setheen/es2015-publish-template.git",
+    "jspm": "^0.16.31",
+    "lodash": "^4.6.1"
+  },
+  "jspm": {
+    "dependencies": {
+      "es2015-publish-template": "github:setheen/es2015-publish-template@master",
+      "lodash": "npm:lodash@^4.6.1"
+    },
+    "devDependencies": {
+      "typescript": "npm:typescript@^1.6.2"
+    }
+  }
 }

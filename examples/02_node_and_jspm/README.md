@@ -18,12 +18,11 @@ node app.js
     - lodash
     
 ## Scenario
-Take a look at this image:
+Take a look at this image
 
 <p align="center">
     <img src="resources/jspm.png"/>
 </p>
-
 
 The key takeaway with this example is we are able to display intellisense module _"d.ts"_ declaration files within our IDE. 
 For lodash, we can rely on the public _"typings"_ registry.  Simple enough right?  What about our own library project?
