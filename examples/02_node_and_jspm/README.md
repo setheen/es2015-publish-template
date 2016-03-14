@@ -46,12 +46,18 @@ My favorite jspm feature
 ```
 That little snippet lives inside the publishing library's package.json.  It allows library authors to publish NodeJS-compatible commonjs format
 over npm (as generally expected) and es6/7 modules when using systemjs without conflict.
+For proof, install this example and navigate to jspm\_packages/github/setheen/. Check out the jspm-generated _"es2015-publish-template@master.js"_ file
+and note the export paths:
+```javascript
+export * from "github:setheen/es2015-publish-template@master/dist/es2015/index.js";
+export {default} from "github:setheen/es2015-publish-template@master/dist/es2015/index.js";
+```
 jspm accepts any kind of module format you can throw at it (umd/amd/commonjs/system/es2015) in any target version of javascript. It's touted as 
 the ultimate dependency loader and worth your time to investigate.  
 
 Unfortunately it has one giant drawback
 ###NO type definition support for NodeJS :(
-Your IDE doesn't know to display d.ts definitions when it sees code like this:
+Your IDE doesn't know to display d.ts definitions when it sees module loading code like this:
 ```javascript
 System.import('some-package').then((p) => 
 {
