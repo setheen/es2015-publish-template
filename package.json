@@ -21,7 +21,7 @@
     "system_es6": "tsc --outDir dist/system_es6 -t es6 -m system --inlineSourceMap lib/index",
     "system": "npm run system_es5 && npm run system_es6",
     "es2015": "tsc --outDir dist/es2015 -t es6 -m es2015 -d --inlineSourceMap lib/index",
-	"global": "jspm bundle-sfx lib/index dist/global/index.bundled.js",
+	"global": "jspm bundle-sfx lib/index dist/global/index.bundled.js --format global",
     "test": "tsc -t es6 -m system --outFile dist/es2015-publish-template.d.ts -d lib/index",
     "clean": "rm dist -R",
     "build-all": "npm run clean && npm run cjs && npm run amd && npm run umd && npm run system && npm run es2015 && npm run global"
